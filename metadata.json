@@ -1,8 +1,5 @@
-
 {
   "name": "AuraForensics - AI Detection Lab",
   "description": "A high-end forensic tool designed to analyze images and videos for signs of AI generation, deepfakes, and synthetic manipulation using advanced multimodal Gemini models.",
-  "requestFramePermissions": [
-    "camera"
-  ]
+  "requestFramePermissions": []
 }
