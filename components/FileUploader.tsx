@@ -1,13 +1,11 @@
-
 import React, { useState, useRef } from 'react';
 
 interface FileUploaderProps {
   onFileSelect: (file: File) => void;
-  onScreenCapture: () => void;
   isLoading: boolean;
 }
 
-const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect, onScreenCapture, isLoading }) => {
+const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect, isLoading }) => {
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -77,30 +75,10 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect, onScreenCaptu
         )}
       </div>
 
-      <div className="flex items-center gap-4">
-        <div className="h-px flex-1 bg-slate-800"></div>
-        <span className="text-xs font-bold text-slate-500 uppercase tracking-widest">or analyze live</span>
-        <div className="h-px flex-1 bg-slate-800"></div>
-      </div>
-
-      <button 
-        disabled={isLoading}
-        onClick={(e) => {
-          e.stopPropagation();
-          onScreenCapture();
-        }}
-        className="w-full py-4 bg-indigo-600 hover:bg-indigo-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-bold rounded-xl flex items-center justify-center gap-3 transition-all active:scale-[0.98] shadow-lg shadow-indigo-500/10 border border-indigo-400/20"
-      >
-        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-        Capture & Analyze Screen
-      </button>
-
       <div className="flex justify-center gap-4">
         <span className="px-3 py-1 bg-slate-900 text-slate-400 text-[10px] mono uppercase border border-slate-700 rounded">JPG/PNG</span>
         <span className="px-3 py-1 bg-slate-900 text-slate-400 text-[10px] mono uppercase border border-slate-700 rounded">MP4/MOV</span>
-        <span className="px-3 py-1 bg-slate-900 text-slate-400 text-[10px] mono uppercase border border-slate-700 rounded">Live Stream</span>
+        <span className="px-3 py-1 bg-slate-900 text-slate-400 text-[10px] mono uppercase border border-slate-700 rounded">Synthetic Media</span>
       </div>
     </div>
   );
