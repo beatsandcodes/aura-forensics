@@ -43,8 +43,9 @@ const Header: React.FC<HeaderProps> = ({ onViewChange, activeView }) => {
           onClick={() => onViewChange('docs')}
           className={`text-[10px] sm:text-sm font-semibold uppercase tracking-wider transition-colors ${activeView === 'docs' ? 'text-indigo-400' : 'text-slate-400 hover:text-white'}`}
         >
-          {/* Label automatically shortens on mobile/tablet */}
-          Docs<span className="hidden lg:inline">umentation</span>
+          {/* Label automatically shortens on mobile/tablet to "Docs" */}
+          <span className="lg:hidden">Docs</span>
+          <span className="hidden lg:inline">Documentation</span>
         </button>
         <button 
           onClick={() => onViewChange('ethics')}
