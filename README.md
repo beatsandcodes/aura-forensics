@@ -5,20 +5,7 @@ A high-end digital forensics tool designed to analyze images and videos for sign
 
 ## Deployment Instructions
 
-### 1. Requirements
-- A [Google Gemini API Key](https://aistudio.google.com/app/apikey).
-- A [Vercel](https://vercel.com) or [Netlify](https://netlify.com) account.
-
-### 2. Step-by-Step Deployment (Vercel)
-1. **Upload Code**: Push this directory to a new GitHub repository.
-2. **Import Project**: Log into Vercel, click "Add New", and select your repository.
-3. **Environment Variables**:
-   - Go to the **Environment Variables** section during setup.
-   - Add a key named `API_KEY`.
-   - Paste your Gemini API key as the value.
-4. **Deploy**: Click the deploy button.
-
-### 3. Local Development
+### . Local Development
 To run this locally, ensure you have a development environment that supports ES modules and environment variables.
 ```bash
 # Example if using Vite
