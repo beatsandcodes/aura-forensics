@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import FileUploader from './components/FileUploader';
 import AnalysisResult from './components/AnalysisResult';
@@ -135,6 +136,7 @@ const App: React.FC = () => {
         {renderActiveView()}
         {error && <div className="max-w-xl mx-auto mt-8 p-4 bg-red-900/20 border border-red-500/50 rounded-xl text-red-400">{error}</div>}
       </main>
+      <Analytics />
     </div>
   );
 };
